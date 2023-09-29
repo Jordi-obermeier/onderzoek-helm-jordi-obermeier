@@ -1,6 +1,6 @@
 # Eenvoudig aan de slag met Kubernetes HELM Charts
 
-_Jordi Obermeier, 29 september 2023_
+Jordi Obermeier, 29 september 2023
 
 ## Doelgroep
 
@@ -21,31 +21,8 @@ De deelvragen zijn ook bedacht door ChatGPT. De deelvragen luiden als volgt:
 
 ## Onderzoeksmethoden
 
-### Literature study (Library)
-
-...
-
-### Community research (Library)
-
-...
-
-### Problem analyses (Field)
-
--> weet welke vragen te stellen voor het probleem dat onderzocht moet worden.
-
-### Pitch (Showroom)
-
-...
-
-### Prototyping (Workshop)
-
-...
-
-## Literatuurlijst
-
-- Research methods (https://ictresearchmethods.nl/Methods)
-- AIM controlekaart (https://han.onderwijsonline.nl/elearning/content/oNkklGNj)
-- OpenAI. (2021). ChatGPT. https://openai.com/research/chatgpt
-- Bron per deelvraag...
-
-> **NOTE**: **Bron titel cursief** & **bronvermelding**
+- Literature study (Library)
+- Community research (Library)
+- Problem analyses (Field)
+- Pitch (Showroom)
+- Prototyping (Workshop)
