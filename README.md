@@ -17,8 +17,6 @@ De deelvragen luiden als volgt:
 3. _Hoe kan ik een bestaande HELM Chart vinden en gebruiken voor mijn specifieke toepassing?_
 4. _Hoe kan ik monitoring en onderhoud uitvoeren voor applicaties die zijn geïmplementeerd met HELM Charts?_
 
-<p style="text-align: right;"><i>Figuur 1: Logo combinatie van HELM en Kubernetes.</i></p>
-
 ## 1. Onderzoeksmethoden
 
 Als ICT-student of -professional wordt er verwacht dat allerlei ICT-uitdagingen op te lossen zijn. Door het gebruik van de (verschillende) onderzoeksmethoden (Niels, 2022a) is het mogelijk snel antwoorden op vragen te krijgen en dus het probleem aan te pakken. Hieronder zijn de onderzoeksmethoden weergeven die gebruikt zijn tijdens dit onderzoeksverslag.
@@ -241,7 +239,7 @@ helm create my-helm-hello-world-app
 Als de `helm create` opdracht geen fouten weergeeft ziet de structuur er nu zo uit:
 
 ![HELM_Structure](/img/HELM_Structure.png)  
-_Figuur 2: De structuur van de HELM Chart._
+_Figuur 1: De structuur van de HELM Chart._
 
 ### 06. Definieer de toepassing in de HELM Chart
 
@@ -294,14 +292,14 @@ helm install <my-java-release> <my-helm-hello-world-app/>
 Gebruik de `helm list` opdracht om te controleren of de release is geïnstalleerd en bekijk de status ervan. Dit ziet er zo uit:
 
 ![HELM_Status](img/HELM_Status.png)  
-_Figuur 3: De HELM is succesvol aangemaakt en geïnstalleerd._
+_Figuur 2: De HELM is succesvol aangemaakt en geïnstalleerd._
 
 ### 10. Applicatie met HELM werkt
 
 De output van de console komt overeen met wat er in de code van `HelloWorld.java` staat.
 
 ![Pod_Output](img/Pod_Output.png)  
-_Figuur 4: De console output komt overeen met de `HelloWorld.java` code._
+_Figuur 3: De console output komt overeen met de `HelloWorld.java` code._
 
 ## 4. Conclusie
 
