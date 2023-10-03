@@ -4,7 +4,7 @@ Jordi Obermeier, 29 september 2023
 
 ## Doelgroep
 
-Het doelgroep zijn de software developers die weinig tot geen kennis hebben van Kubernetes en het deployen d.m.v. een HELM Chart.
+De doelgroep zijn de software developers die weinig tot geen kennis hebben van het deployen d.m.v. een HELM Chart met Kubernetes.
 
 ## Hoofdvraag
 

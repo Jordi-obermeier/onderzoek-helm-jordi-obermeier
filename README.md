@@ -47,13 +47,13 @@ In het kopje onderzoek worden de deelvragen één voor één beantwoord met Chat
 
 ### 2.1 Wat zijn Kubernetes en HELM Charts, en waarom zijn ze relevant voor software developers?
 
-Kubernetes is een krachtig open-source containerorkestratieplatform dat is ontworpen om de implementatie, schaalbaarheid en het beheer van containerized applicaties te vereenvoudigen. Het fungeert als een geautomatiseerde beheerder van containerclusters, waardoor ontwikkelaars zich kunnen richten op het bouwen van applicaties zonder zich zorgen te hoeven maken over de onderliggende infrastructuur.
+Kubernetes is een krachtig open-source containerorkestratieplatform dat is ontworpen om de implementatie, schaalbaarheid en het beheer van containerized applicaties te vereenvoudigen. Het fungeert als een geautomatiseerde beheerder van containerclusters, waardoor ontwikkelaars zich kunnen richten op het bouwen van applicaties zonder zich zorgen te hoeven maken over de onderliggende infrastructuur (Oracle, z.d.).
 
-Helm is een krachtige package manager voor Kubernetes, vergelijkbaar met bekende tools zoals 'apt' voor Unix-systemen en 'pip' voor Python. Het stelt Kubernetes gebruikers in staat om softwaretoepassingen te installeren, upgraden en beheren, evenals de bijbehorende afhankelijkheden. Wat Helm bijzonder handig maakt, is dat het ook configuratieopties biedt voor softwaretoepassingen, waardoor het eenvoudiger wordt om ze te implementeren in een Kubernetes-cluster.
+Helm is een krachtige package manager voor Kubernetes, vergelijkbaar met bekende tools zoals 'apt' voor Unix-systemen en 'pip' voor Python (TransIP, z.d.). Het stelt Kubernetes gebruikers in staat om softwaretoepassingen te installeren, upgraden en beheren, evenals de bijbehorende afhankelijkheden. Wat Helm bijzonder handig maakt, is dat het ook configuratieopties biedt voor softwaretoepassingen, waardoor het eenvoudiger wordt om ze te implementeren in een Kubernetes-cluster (Helm, z.d.-a).
 
-Helm-packages maken gebruik van wat we 'charts' noemen. Deze charts bevatten vaak .yaml configuratiebestanden en sjablonen voor Kubernetes manifesten. In de volgende sectie zullen we dieper ingaan op charts en hun bijbehorende templates, en laten we zien hoe Helm kan worden toegepast op concrete voorbeelden, zoals het implementeren van toepassingen in Kubernetes met behulp van charts en configuratieopties.
+Helm-packages maken gebruik van wat we 'charts' noemen. Deze charts bevatten vaak `.yaml` configuratiebestanden en sjablonen voor Kubernetes manifesten (TransIP, z.d.). In de volgende sectie wordt er dieper ingegaan op HELM Charts en hun bijbehorende templates. Verderop in hoofdstuk "3. Prototype met Java, Docker, Kubernetes en HELM" wordt getoond hoe een HELM kan worden toegepast, zoals het implementeren van een toepassing in Kubernetes met behulp van HELM Charts en configuratieopties.
 
-Kubernetes en Helm Charts zijn onmisbare tools voor moderne softwareontwikkelaars die containerized applicaties in een schaalbare, beheersbare en configureerbare omgeving willen implementeren en beheren. Ze verminderen de complexiteit van infrastructuurbeheer en stellen ontwikkelaars in staat zich te concentreren op het bouwen van hoogwaardige applicaties.
+Kortom zijn Kubernetes en HELM Charts onmisbare tools voor moderne softwareontwikkelaars die containerized applicaties in een schaalbare, beheersbare en configureerbare omgeving willen implementeren en beheren. Ze verminderen de complexiteit van infrastructuurbeheer en stellen ontwikkelaars in staat zich te concentreren op het bouwen van hoogwaardige applicaties.
 
 ### 2.2 Wat zijn de voordelen en nadelen van het gebruik van HELM Charts voor het beheren van Kubernetes-applicaties?
 
@@ -61,27 +61,27 @@ Het gebruik van HELM Charts voor het beheren van Kubernetes-applicaties biedt ve
 
 **Voordelen van het gebruik van HELM Charts:**
 
-- Herbruikbaarheid: HELM Charts bieden gestandaardiseerde sjablonen voor Kubernetes-resources. Dit maakt het gemakkelijk om dezelfde configuratie te hergebruiken voor verschillende toepassingen of omgevingen.
-- Configuratiebeheer: HELM Charts laten ontwikkelaars configuratieopties definiëren en aanpassen voor hun toepassingen. Hierdoor kunnen parameters zoals poortnummers, wachtwoorden en omgevingsvariabelen worden aangepast zonder de broncode te wijzigen.
-- Versiebeheer: HELM Charts kunnen worden geversioneerd, waardoor het eenvoudig is om oudere configuraties en releases bij te houden. Dit is handig voor rollbacks en auditing.
-- Eenvoudige implementatie: Met HELM kunnen ontwikkelaars snel en eenvoudig toepassingen implementeren in Kubernetes clusters door simpelweg een HELM opdracht uit te voeren.
-- Community en Ecosysteem: Er is een actieve gemeenschap van HELM gebruikers en ontwikkelaars die bijdragen aan een groeiend ecosysteem van beschikbare HELM Charts en plugins.
-- Documentatie en best practices: HELM heeft uitgebreide documentatie en best practices die ontwikkelaars begeleiden bij het maken en beheren van HELM Charts.
+- Herbruikbaarheid: HELM Charts bieden gestandaardiseerde sjablonen voor Kubernetes-resources. Dit maakt het gemakkelijk om dezelfde configuratie te hergebruiken voor verschillende toepassingen of omgevingen (TrustRadius, z.d.).
+- Configuratiebeheer: HELM Charts laten ontwikkelaars configuratieopties definiëren en aanpassen voor hun toepassingen. Hierdoor kunnen parameters zoals poortnummers, wachtwoorden en omgevingsvariabelen worden aangepast zonder de broncode te wijzigen (TrustRadius, z.d.).
+- Versiebeheer: HELM Charts kunnen worden geversioneerd, waardoor het eenvoudig is om oudere configuraties en releases bij te houden. Dit is handig voor rollbacks en auditing (TrustRadius, z.d.).
+- Eenvoudige implementatie: Met HELM kunnen ontwikkelaars snel en eenvoudig toepassingen implementeren in Kubernetes clusters door simpelweg een HELM opdracht uit te voeren (David, 2022).
+- Community en Ecosysteem: Er is een actieve gemeenschap van HELM gebruikers en ontwikkelaars die bijdragen aan een groeiend ecosysteem van beschikbare HELM Charts en plugins (David, 2022).
+- Documentatie en best practices: HELM heeft uitgebreide documentatie en best practices die ontwikkelaars begeleiden bij het maken en beheren van HELM Charts (David, 2022).
 
 **Nadelen en Uitdagingen bij het gebruik van HELM Charts:**
 
-- Leercurve: Voor nieuwe gebruikers kan HELM enigszins complex lijken, vooral als ze niet vertrouwd zijn met Kubernetes concepten.
-- Overhead voor Kleine Projecten: Voor kleine en eenvoudige projecten kan het opzetten van HELM Charts meer inspanning vergen dan handmatige configuratie.
-- Compatibiliteit en Updates: HELM Charts moeten compatibel blijven met evoluerende Kubernetes versies en de bijbehorende API wijzigingen. Updates kunnen nodig zijn om Charts te blijven gebruiken met nieuwere Kubernetes versies.
-- Veiligheidskwesties: Onjuist geconfigureerde HELM Charts kunnen veiligheidsrisico's met zich meebrengen. Het is belangrijk om beveiliging best practices te volgen bij het maken en gebruiken van Charts.
-- Beheer van Afhankelijkheden: Als een Chart afhankelijkheden heeft, moeten deze correct worden beheerd en bijgewerkt om compatibiliteitsproblemen te voorkomen.
+- Leercurve: Voor nieuwe gebruikers kan HELM enigszins complex lijken, vooral als ze niet vertrouwd zijn met Kubernetes concepten (David, 2022).
+- Overhead voor Kleine Projecten: Voor kleine en eenvoudige projecten kan het opzetten van HELM Charts meer inspanning vergen dan handmatige configuratie (TrustRadius, z.d.).
+- Compatibiliteit en Updates: HELM Charts moeten compatibel blijven met evoluerende Kubernetes versies en de bijbehorende API wijzigingen. Updates kunnen nodig zijn om Charts te blijven gebruiken met nieuwere Kubernetes versies (TrustRadius, z.d.).
+- Veiligheidskwesties: Onjuist geconfigureerde HELM Charts kunnen veiligheidsrisico's met zich meebrengen. Het is belangrijk om beveiliging best practices te volgen bij het maken en gebruiken van Charts (TrustRadius, z.d.).
+- Beheer van Afhankelijkheden: Als een Chart afhankelijkheden heeft, moeten deze correct worden beheerd en bijgewerkt om compatibiliteitsproblemen te voorkomen (David, 2022).
 - Afhankelijkheid van de HELM gemeenschap: Bij het gebruik van HELM Charts vertrouw je op de gemeenschap om kwalitatieve en actuele Charts te produceren. Als een specifieke Chart niet wordt onderhouden, kan dit problemen veroorzaken.
 
 Over het algemeen bieden HELM Charts aanzienlijke voordelen voor het beheren van Kubernetes applicaties, met name in complexe omgevingen waar herbruikbaarheid en configuratiebeheer belangrijk zijn. Het is echter essentieel om de leercurve te overwinnen en best practices te volgen om de nadelen te minimaliseren en de voordelen optimaal te benutten.
 
 ### 2.3 Hoe kan ik een bestaande HELM Chart vinden en gebruiken voor mijn specifieke toepassing?
 
-Het vinden en gebruiken van een bestaande HELM Chart voor een specifieke toepassing is vrij eenvoudig. Hieronder zijn de stappen weergeven om dit te doen.
+Het vinden en gebruiken van een bestaande HELM Chart voor een specifieke toepassing is vrij eenvoudig. Hieronder zijn de stappen weergeven om dit te doen (Helm, z.d.-b).
 
 #### 1. Zoeken in Artifact HELM Repository of HELM CLI
 
@@ -125,51 +125,51 @@ helm list
 
 #### 6. Beheren van de releases
 
-Nadat de HELM Chart geïnstalleerd is, kunnen de releases beheert worden met HELM opdrachten zoals [upgraden](https://helm.sh/docs/helm/helm_upgrade/), [verwijderen](https://helm.sh/docs/helm/helm_uninstall/) en [rollbacks](https://helm.sh/docs/helm/helm_rollback/) uitvoeren indien nodig.
+Nadat de HELM Chart geïnstalleerd is, kunnen de releases beheert worden met HELM opdrachten zoals [upgraden](https://helm.sh/docs/helm/helm_upgrade/), [verwijderen](https://helm.sh/docs/helm/helm_uninstall/) en [rollbacks](https://helm.sh/docs/helm/helm_rollback/) indien nodig.
 
 ### 2.4 Hoe kan ik monitoring en onderhoud uitvoeren voor applicaties die zijn geïmplementeerd met HELM Charts?
 
-Monitoring en onderhoud van applicaties die zijn geïmplementeerd met HELM Charts zijn essentieel om ervoor te zorgen dat toepassingen soepel blijven werken en om eventuele problemen snel op te lossen. Hieronder zijn stappen weergeven die gevolgd kunnen worden om monitoring en onderhoud uit te voeren.
+Monitoring en onderhoud van applicaties die zijn geïmplementeerd met HELM Charts zijn essentieel om ervoor te zorgen dat toepassingen soepel blijven werken en om eventuele problemen snel op te lossen (Burillo, 2021). Hieronder zijn stappen weergeven die gevolgd kunnen worden om monitoring en onderhoud uit te voeren.
 
-#### 01. Implementeer monitoring tools
+#### - Implementeer monitoring tools
 
-Gebruik tools zoals Prometheus en Grafana om monitoring en observatie in te stellen voor Kubernetes-cluster en applicaties. HELM Charts zijn beschikbaar voor deze tools om de installatie te vereenvoudigen.
+Gebruik tools zoals Prometheus en Grafana om monitoring en observatie in te stellen voor Kubernetes-cluster en applicaties (Reock, 2019). HELM Charts zijn beschikbaar voor deze tools om de installatie te vereenvoudigen.
 
-#### 02. Configureer monitoring voor applicaties
+#### - Configureer monitoring voor applicaties
 
-Binnen een HELM Chart kunnen specifieke instellingen geconfigureerd worden om metrische gegevens te genereren en te exporteren, bijvoorbeeld met Prometheus exporters. Zorg ervoor dat de applicaties die geïmplementeerd zijn, metrische gegevens genereren die relevant zijn voor de prestaties en status van de toepassing.
+Binnen een HELM Chart kunnen specifieke instellingen geconfigureerd worden om metrische gegevens te genereren en te exporteren, bijvoorbeeld met Prometheus exporters. Zorg ervoor dat de applicaties die geïmplementeerd zijn, metrische gegevens genereren die relevant zijn voor de prestaties en status van de toepassing (Reock, 2019).
 
-#### 03. Maak aangepaste dashboards
+#### - Maak aangepaste dashboards
 
-Maak aangepaste dashboards in bijvoorbeeld Grafana om belangrijke metrische gegevens te visualiseren. Hierdoor kunnen snel problemen geïdentificeerd en trends (observeren en analyseren) gevolgd worden.
+Maak aangepaste dashboards in bijvoorbeeld Grafana om belangrijke metrische gegevens te visualiseren (Grafana, z.d.). Hierdoor kunnen snel problemen geïdentificeerd en trends (observeren en analyseren) gevolgd worden.
 
-#### 04. Stel waarschuwingen in
+#### - Stel waarschuwingen in
 
-Configureer waarschuwingen in Prometheus of Grafana op basis van de metrische gegevens. Dit stelt in staat om proactief te reageren op problemen voordat ze kritiek worden.
+Configureer waarschuwingen in Prometheus of Grafana op basis van de metrische gegevens. Dit stelt in staat om proactief te reageren op problemen voordat ze kritiek worden (Reock, 2019).
 
-#### 05. Voer regelmatig onderhoud uit
+#### - Voer regelmatig onderhoud uit
 
-Voer regelmatig onderhoud uit voor zowel de Kubernetes-cluster als de applicaties zelf. Dit omvat het bijwerken van HELM Charts, Kubernetes en applicatiecontainers naar de nieuwste versies.
+Voer regelmatig onderhoud uit voor zowel de Kubernetes-cluster als de applicaties zelf. Dit omvat het bijwerken van HELM Charts, Kubernetes en applicatiecontainers naar de nieuwste versies (Codefresh, z.d.).
 
-#### 06. Maak back-ups
+#### - Maak back-ups
 
-Maak regelmatig back-ups van de configuratie van de HELM releases en applicatiegegevens. Dit is vooral belangrijk als wijzigingen aangebracht worden in de configuratie.
+Maak regelmatig back-ups van de configuratie van de HELM releases en applicatiegegevens. Dit is vooral belangrijk als wijzigingen aangebracht worden in de configuratie (Curity, z.d.).
 
-#### 07. Automatiseer Taken
+#### - Automatiseer taken
 
-Automatiseer taken zoals het opschonen van oude resources, het bijwerken van HELM releases en het herstarten van pods indien nodig.
+Automatiseer taken zoals het opschonen van oude resources, het bijwerken van HELM releases en het herstarten van pods indien nodig (Boom, 2022).
 
-#### 08. Implementeer CI/CD-pijplijnen
+#### - Implementeer CI/CD-pipelines
 
-Gebruik Continuous Integration/Continuous Deployment (CI/CD) pipelines om automatisch nieuwe versies van applicaties uit te rollen en ervoor te zorgen dat HELM Charts up-to-date blijven.
+Gebruik Continuous Integration/Continuous Deployment (CI/CD) pipelines om automatisch nieuwe versies van applicaties uit te rollen en ervoor te zorgen dat HELM Charts up-to-date blijven (Helm, z.d.-c).
 
-#### 09. Documenteer Processen
+#### - Documenteer processen
 
-Documenteer monitoring- en onderhoudsprocessen, zodat het team begrijpt hoe te handelen in geval van problemen.
+Documenteer monitoring- en onderhoudsprocessen, zodat het team begrijpt hoe te handelen in geval van problemen (David, 2022).
 
-#### 10. Leer van Incidenten
+#### - Leer van incidenten
 
-Evalueer incidenten en problemen om te begrijpen wat er is gebeurd en hoe soortgelijke problemen in de toekomst voorkomen kunnen worden.
+Evalueer incidenten en problemen om te begrijpen wat er is gebeurd en hoe soortgelijke problemen in de toekomst voorkomen kunnen worden (David, 2022).
 
 &nbsp;
 
@@ -311,12 +311,24 @@ Kortom, met de juiste stappen en hulpbronnen kunnen software developers met bepe
 
 ## Literatuurlijst
 
-- OpenAI. (2021). ChatGPT. Geraadpleegd op 29 september 2023, van [https://openai.com/research/chatgpt](https://openai.com/research/chatgpt)
 - AIM Professional Skills. (2014, 1 juli). Controlekaart documenten ICA. Geraadpleegd op 22-9-2023 op [https://factlearning.files.wordpress.com/2016/02/controlekaart-documenten-ica.pdf](https://factlearning.files.wordpress.com/2016/02/controlekaart-documenten-ica.pdf).
+- Boom, N. T. (2022, 6 juli). How to set up automated helm chart upgrades. Medium. Geraadpleegd op 3 oktober 2023, van [https://blog.promaton.com/how-to-set-up-automated-helm-chart-upgrades-e292192a9aad](https://blog.promaton.com/how-to-set-up-automated-helm-chart-upgrades-e292192a9aad)
+- Burillo, M. (2021, 16 februari). _Kubernetes monitoring with Prometheus, the ultimate guide_. Sysdig. Geraadpleegd op 3 oktober 2023, van [https://sysdig.com/blog/kubernetes-monitoring-prometheus/](https://sysdig.com/blog/kubernetes-monitoring-prometheus/)
+- Codefresh. (z.d.). _Helm best practices_. Codefresh. Geraadpleegd op 3 oktober 2023, van [https://codefresh.io/docs/docs/ci-cd-guides/helm-best-practices/#:~:text=the%20next%20section.-,Package%2Fpush%20and%20then%20deploy,that%20run%20on%20your%20cluster](https://codefresh.io/docs/docs/ci-cd-guides/helm-best-practices/#:~:text=the%20next%20section.-,Package%2Fpush%20and%20then%20deploy,that%20run%20on%20your%20cluster)
+- Curity. (z.d.). _Configuration backups and logging using HELM_. Curity. Geraadpleegd op 3 oktober 2023, van [https://curity.io/resources/learn/run-cluster-helm/](https://curity.io/resources/learn/run-cluster-helm/)
+- David, R. (2022, 8 juni). _What is HeLm, and why you should be using it?_. BairesDev. Geraadpleegd op 3 oktober 2023, van [https://www.bairesdev.com/blog/what-is-helm-and-why-you-should-be-using-it/](https://www.bairesdev.com/blog/what-is-helm-and-why-you-should-be-using-it/)
+- Grafana. (z.d.). _Get started with Grafana Mimir using the Helm Chart_. Grafana. Geraadpleegd op 3 oktober 2023, van [https://grafana.com/docs/helm-charts/mimir-distributed/latest/get-started-helm-charts/](https://grafana.com/docs/helm-charts/mimir-distributed/latest/get-started-helm-charts/)
+- Helm. (z.d.-a). _Charts_. Helm. Geraadpleegd op 3 oktober 2023, van [https://helm.sh/docs/topics/charts/](https://helm.sh/docs/topics/charts/)
+- Helm. (z.d.-b). _Using helm_. Helm. Geraadpleegd op 3 oktober 2023, van [https://helm.sh/docs/intro/using_helm/](https://helm.sh/docs/intro/using_helm/)
+- Helm. (z.d.-c). Template Functions and Pipelines. Helm. Geraadpleegd op 3 oktober 2023, van [https://helm.sh/docs/chart_template_guide/functions_and_pipelines/](https://helm.sh/docs/chart_template_guide/functions_and_pipelines/)
 - Niels, R. (2022a, 10 juni). _Methods_.  ICT Research Method. Geraadpleegd op 29 september 2023, van [https://ictresearchmethods.nl/Methods](https://ictresearchmethods.nl/Methods)
 - Niels, R. (2022b, 24 mei). _Literature study_.  ICT Research Method. Geraadpleegd op 29 september 2023, van [https://ictresearchmethods.nl/Literature_study](https://ictresearchmethods.nl/Literature_study)
 - Niels, R. (2018a, 9 februari). _Community research_.  ICT Research Method. Geraadpleegd op 29 september 2023, van [https://ictresearchmethods.nl/Community_research](https://ictresearchmethods.nl/Community_research)
 - Niels, R. (2018b, 9 februari). _Problem analysis_.  ICT Research Method. Geraadpleegd op 29 september 2023, van [https://ictresearchmethods.nl/Problem_analysis](https://ictresearchmethods.nl/Problem_analysis)
 - Niels, R. (2018c, 9 februari). _Pitch_.  ICT Research Method. Geraadpleegd op 29 september 2023, van [https://ictresearchmethods.nl/Pitch](https://ictresearchmethods.nl/Pitch)
 - Niels, R. (2018d, 9 februari). _Prototyping_.  ICT Research Method. Geraadpleegd op 29 september 2023, van [https://ictresearchmethods.nl/Prototyping](https://ictresearchmethods.nl/Prototyping)
-- Bron per deelvraag..
+- OpenAI. (2021). ChatGPT. Geraadpleegd op 29 september 2023, van [https://openai.com/research/chatgpt](https://openai.com/research/chatgpt)
+- Oracle. (z.d.). _Wat is kubernetes?_. Oracle Nederland. Geraadpleegd op 3 oktober 2023, van [https://www.oracle.com/nl/cloud/cloud-native/container-engine-kubernetes/what-is-kubernetes/](https://www.oracle.com/nl/cloud/cloud-native/container-engine-kubernetes/what-is-kubernetes/)
+- Reock, J. (2019, 7 februari). _How to configure Prometheus AlertManager for Grafana Alerts and Prometheus Alerts_. OpenLogic. Geraadpleegd op 3 oktober 2023, van [https://www.openlogic.com/blog/configuring-grafana-and-prometheus-alertmanager](https://www.openlogic.com/blog/configuring-grafana-and-prometheus-alertmanager)
+- TransIP. (z.d.). _Wat zijn helm charts voor kubernetes?_. TransIP. Geraadpleegd op 3 oktober 2023, van [https://www.transip.nl/knowledgebase/artikel/6560-zijn-helm-charts-voor-kubernetes/#:~:text=Helm%20is%20een%20package%20manager,set%20van%20Kubernetes%20resources%20beschrijft](https://www.transip.nl/knowledgebase/artikel/6560-zijn-helm-charts-voor-kubernetes/#:~:text=Helm%20is%20een%20package%20manager,set%20van%20Kubernetes%20resources%20beschrijft)
+- TrustRadius. (z.d.). _What is Helm?_. TrustRadius. Geraadpleegd op 3 oktober 2023, van [https://www.trustradius.com/products/helm/reviews?qs=pros-and-cons#reviews](https://www.trustradius.com/products/helm/reviews?qs=pros-and-cons#reviews)
