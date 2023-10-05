@@ -23,7 +23,7 @@ Als ICT-student of -professional wordt er verwacht dat allerlei ICT-uitdagingen 
 
 ### 1.1 Literature study (Library)
 
-Literature study wordt gebruikt om informatie over HELM Charts te vergaren op het internet. Hierbij zijn er bronnen gebruikt, waarbij in de tekst(en) vermeld wordt waar de informatie vandaan is gehaald (Niels, 2022b). Alle bronnen staan in de literatuurlijst.
+Literature study wordt gebruikt om informatie over HELM Charts te vergaren op het internet. Hierbij zijn er bronnen gebruikt, waarbij in de teksten een referentie staat waar de informatie vandaan is gehaald (Niels, 2022b). Alle bronnen staan in de literatuurlijst.
 
 ### 1.2 Community research (Library)
 
@@ -39,7 +39,7 @@ Pitch wordt gebruikt om uiteindelijk het onderzoek te presenteren. Naast het ond
 
 ### 1.5 Prototyping (Workshop)
 
-Prototyping wordt gebruikt om snel en visueel te valideren of een concept of idee haalbaar is en om eventuele risico's te identificeren (Niels, 2018d). Er wordt dus een prototype gemaakt op basis van Kubernetes en de HEML Chart.
+Prototyping wordt gebruikt om snel en visueel te valideren of een concept of idee haalbaar is en om eventuele risico's te identificeren (Niels, 2018d). Er wordt dus een prototype gemaakt op basis van Kubernetes en de HELM Chart.
 
 ## 2. Onderzoeksresultaten
 
@@ -65,16 +65,16 @@ Het gebruik van HELM Charts voor het beheren van Kubernetes-applicaties biedt ve
 - Configuratiebeheer: HELM Charts laten ontwikkelaars configuratieopties definiëren en aanpassen voor hun toepassingen. Hierdoor kunnen parameters zoals poortnummers, wachtwoorden en omgevingsvariabelen worden aangepast zonder de broncode te wijzigen (TrustRadius, z.d.).
 - Versiebeheer: HELM Charts kunnen worden geversioneerd, waardoor het eenvoudig is om oudere configuraties en releases bij te houden. Dit is handig voor rollbacks en auditing (TrustRadius, z.d.).
 - Eenvoudige implementatie: Met HELM kunnen ontwikkelaars snel en eenvoudig toepassingen implementeren in Kubernetes clusters door simpelweg een HELM opdracht uit te voeren (David, 2022).
-- Community en Ecosysteem: Er is een actieve gemeenschap van HELM gebruikers en ontwikkelaars die bijdragen aan een groeiend ecosysteem van beschikbare HELM Charts en plugins (David, 2022).
+- Community en ecosysteem: Er is een actieve gemeenschap van HELM gebruikers en ontwikkelaars die bijdragen aan een groeiend ecosysteem van beschikbare HELM Charts en plugins (David, 2022).
 - Documentatie en best practices: HELM heeft uitgebreide documentatie en best practices die ontwikkelaars begeleiden bij het maken en beheren van HELM Charts (David, 2022).
 
-**Nadelen en Uitdagingen bij het gebruik van HELM Charts:**
+**Nadelen en uitdagingen bij het gebruik van HELM Charts:**
 
 - Leercurve: Voor nieuwe gebruikers kan HELM enigszins complex lijken, vooral als ze niet vertrouwd zijn met Kubernetes concepten (David, 2022).
-- Overhead voor Kleine Projecten: Voor kleine en eenvoudige projecten kan het opzetten van HELM Charts meer inspanning vergen dan handmatige configuratie (TrustRadius, z.d.).
-- Compatibiliteit en Updates: HELM Charts moeten compatibel blijven met evoluerende Kubernetes versies en de bijbehorende API wijzigingen. Updates kunnen nodig zijn om Charts te blijven gebruiken met nieuwere Kubernetes versies (TrustRadius, z.d.).
+- Overhead voor kleine projecten: Voor kleine en eenvoudige projecten kan het opzetten van HELM Charts meer inspanning vergen dan handmatige configuratie (TrustRadius, z.d.).
+- Compatibiliteit en updates: HELM Charts moeten compatibel blijven met evoluerende Kubernetes versies en de bijbehorende API wijzigingen. Updates kunnen nodig zijn om Charts te blijven gebruiken met nieuwere Kubernetes versies (TrustRadius, z.d.).
 - Veiligheidskwesties: Onjuist geconfigureerde HELM Charts kunnen veiligheidsrisico's met zich meebrengen. Het is belangrijk om beveiliging best practices te volgen bij het maken en gebruiken van Charts (TrustRadius, z.d.).
-- Beheer van Afhankelijkheden: Als een Chart afhankelijkheden heeft, moeten deze correct worden beheerd en bijgewerkt om compatibiliteitsproblemen te voorkomen (David, 2022).
+- Beheer van afhankelijkheden: Als een Chart afhankelijkheden heeft, moeten deze correct worden beheerd en bijgewerkt om compatibiliteitsproblemen te voorkomen (David, 2022).
 - Afhankelijkheid van de HELM gemeenschap: Bij het gebruik van HELM Charts vertrouw je op de gemeenschap om kwalitatieve en actuele Charts te produceren. Als een specifieke Chart niet wordt onderhouden, kan dit problemen veroorzaken.
 
 Over het algemeen bieden HELM Charts aanzienlijke voordelen voor het beheren van Kubernetes applicaties, met name in complexe omgevingen waar herbruikbaarheid en configuratiebeheer belangrijk zijn. Het is echter essentieel om de leercurve te overwinnen en best practices te volgen om de nadelen te minimaliseren en de voordelen optimaal te benutten.
@@ -83,7 +83,7 @@ Over het algemeen bieden HELM Charts aanzienlijke voordelen voor het beheren van
 
 Het vinden en gebruiken van een bestaande HELM Chart voor een specifieke toepassing is vrij eenvoudig. Hieronder zijn de stappen weergeven om dit te doen (Helm, z.d.-b).
 
-#### 1. Zoeken in Artifact HELM Repository of HELM CLI
+#### 1. Zoeken in Artifact HELM repository of HELM CLI
 
 De eerste stap is om te zoeken naar een bestaande HELM Chart die past bij de toepassing. HELM Charts worden vaak gedeeld en gepubliceerd in openbare repositories. De officiële HELM repository is [Artifact Hub](https://artifacthub.io/), waar veel HELM Charts te vinden zijn of gebruik de HELM CLI-opdracht `helm search` om naar HELM Charts te zoeken. Bijvoorbeeld:
 
@@ -107,7 +107,7 @@ helm install <release-naam> <repository/chart-naam>
 
 > NOTE: Vervang "release-naam" door een naam voor de release en "repository/chart-naam" door de naam van de HELM Chart die geïnstalleerd moet worden.
 
-#### 4. Pas configuratie aan (optioneel)
+#### 4. Pas configuratie aan
 
 Als de standaardconfiguratie van de HELM Chart moet worden aangepast aan de specifieke toepassing, kan er een values.yaml bestand gemaakt of bewerkt worden. Vervolgens kan dit aan de `helm install` opdracht toegevoegd worden met de `--values-vlag`. Bijvoorbeeld:
 
@@ -173,11 +173,11 @@ Evalueer incidenten en problemen om te begrijpen wat er is gebeurd en hoe soortg
 
 &nbsp;
 
-Kortom, het monitoren en onderhouden van applicaties in Kubernetes met HELM Charts is een doorlopend proces. Het vereist aandacht voor detail en proactieve betrokkenheid om de betrouwbaarheid en prestaties van applicaties te waarborgen. Het opzetten van een solide monitoring- en onderhoudsinfrastructuur is van cruciaal belang voor succesvolle Kubernetes implementaties.
+Kortom is het monitoren en onderhouden van applicaties in Kubernetes met HELM Charts een doorlopend proces. Het vereist aandacht voor detail en proactieve betrokkenheid om de betrouwbaarheid en prestaties van applicaties te waarborgen. Het opzetten van een solide monitoring- en onderhoudsinfrastructuur is van cruciaal belang voor succesvolle Kubernetes implementaties.
 
 ## 3. Prototype met Java, Docker, Kubernetes en HELM
 
-Nu de deelvragen beantwoord zijn (theorie), is het tijd om met de informatie een prototype te maken (praktijk). Het prototype wordt gemaakt in Java met Docker (Kubernetes) en met HELM.
+Nu de deelvragen beantwoord zijn, is het tijd om een prototype te maken. Het prototype wordt gemaakt in Java met Docker (Kubernetes) en met de HELM Chart.
 
 ### 01. Vereisten
 
